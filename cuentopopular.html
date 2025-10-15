@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Tipos de Cuentos</title>
+  <style>
+    body {
+      background-color: #e0f7fa; /* fondo más notorio */
+      font-family: Arial, sans-serif;
+      font-size: 16px;
+      margin: 0;
+      padding: 20px;
+      color: #333;
+      text-align: justify;
+    }
+
+    .contenedor {
+      max-width: 900px;
+      margin: auto;
+      background-color: #ffffffcc;
+      padding: 25px 30px;
+      border-radius: 10px;
+      box-shadow: 0 0 15px rgba(0,0,0,0.1);
+    }
+
+    h1, h2 {
+      text-transform: uppercase;
+      font-weight: bold;
+      font-style: italic;
+      text-decoration: underline;
+    }
+
+    h1 {
+      text-align: center;
+      margin-bottom: 1.5em;
+      color: #2a4d69;
+    }
+
+    .categoria h2 {
+      color: #4a90e2;
+      margin-top: 0;
+    }
+
+    .categoria p, .categoria ul {
+      margin-bottom: 1em;
+    }
+
+    .ejemplo {
+      font-style: italic;
+      color: #555;
+    }
+
+    ul {
+      list-style-type: disc;
+      padding-left: 20px;
+    }
+
+    .categoria ul li {
+      margin-bottom: 15px;
+      display: flex;
+      align-items: center;
+      gap: 15px;
+    }
+
+    .categoria ul li img {
+      width: 80px;
+      height: 80px;
+      object-fit: cover;
+      border-radius: 8px;
+      flex-shrink: 0;
+      box-shadow: 0 0 6px rgba(0,0,0,0.1);
+    }
+  </style>
+</head>
+<body>
+
+  <div class="contenedor">
+    <h1>Tipos de Cuentos</h1>
+
+    <div class="categoria">
+      <h2>📖 1. Cuento Popular o Tradicional</h2>
+      <p>Son relatos anónimos que se transmiten de generación en generación, generalmente de forma oral. Suelen tener una enseñanza (moraleja).</p>
+      <p><strong>Subtipos:</strong></p>
+      <ul>
+        <li>
+          <img src="https://cdn.pixabay.com/photo/2017/09/10/19/05/fairy-tale-2735422_1280.jpg" alt="Cuento de hadas" />
+          <div>
+            <strong>Cuento de hadas:</strong> Con elementos mágicos y fantásticos.<br>
+            <span class="ejemplo">Ej.: Cenicienta, La Bella Durmiente.</span>
+          </div>
+        </li>
+        <li>
+          <img src="https://cdn.pixabay.com/photo/2017/02/22/20/58/fox-2083492_1280.jpg" alt="Cuento de animales" />
+          <div>
+            <strong>Cuento de animales:</strong> Los personajes son animales con características humanas.<br>
+            <span class="ejemplo">Ej.: El cuervo y la zorra.</span>
+          </div>
+        </li>
+        <li>
+          <img src="https://cdn.pixabay.com/photo/2018/03/06/10/39/village-3209650_1280.jpg" alt="Cuento de costumbres" />
+          <div>
+            <strong>Cuento de costumbres:</strong> Reflejan la vida y tradiciones de un pueblo.
+          </div>
+        </li>
+      </ul>
+    </div>
+
+  </div>
+
+</body>
+</html>

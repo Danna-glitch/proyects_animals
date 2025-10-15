@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Biblioteca Virtual de Cuentos</title>
+  <style>
+    /* Reset básico */
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f9f9f9;
+      line-height: 1.6;
+    }
+
+    header {
+      background-color: #4A90E2;
+      color: white;
+      padding: 1.5em 1em;
+      text-align: center;
+    }
+
+    nav {
+      background-color: #333;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      flex-wrap: wrap;
+      margin: 0;
+      padding: 0;
+    }
+
+    nav ul li {
+      position: relative;
+    }
+
+    nav > ul > li {
+      flex: none;
+    }
+
+    nav ul li a {
+      display: block;
+      padding: 14px 20px;
+      color: white;
+      text-decoration: none;
+      white-space: nowrap;
+    }
+
+    nav ul li a:hover,
+    nav ul li a:focus {
+      background-color: #575757;
+    }
+
+    /* Submenú (primer nivel) */
+    nav ul li ul {
+      display: none;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      background-color: #444;
+      min-width: 180px;
+      z-index: 1000;
+      flex-direction: column;
+      border-radius: 0 0 5px 5px;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+    }
+
+    /* Mostrar submenú al hacer hover en el padre */
+    nav ul li:hover > ul,
+    nav ul li:focus-within > ul {
+      display: flex;
+    }
+
+    /* Submenú nivel 2 (sub-submenú) */
+    nav ul li ul li ul {
+      top: 0;
+      left: 100%;
+      border-radius: 0 5px 5px 5px;
+    }
+
+    /* Submenú nivel 2 oculto por defecto */
+    nav ul li ul li ul {
+      display: none;
+      position: absolute;
+      background-color: #555;
+      min-width: 180px;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.25);
+    }
+
+    /* Mostrar sub-submenú al hover en su padre */
+    nav ul li ul li:hover > ul,
+    nav ul li ul li:focus-within > ul {
+      display: flex;
+    }
+
+    /* Ajustes para elementos dentro de submenús */
+    nav ul li ul li a {
+      padding: 12px 16px;
+      color: white;
+    }
+
+    nav ul li ul li a:hover,
+    nav ul li ul li a:focus {
+      background-color: #666;
+    }
+
+    main {
+      padding: 20px;
+      max-width: 900px;
+      margin: 20px auto;
+      background: white;
+      border-radius: 5px;
+      box-shadow: 0 0 8px rgba(0,0,0,0.1);
+    }
+
+    footer {
+      background-color: #4A90E2;
+      color: white;
+      text-align: center;
+      padding: 15px 10px;
+      margin-top: 40px;
+      font-size: 0.9em;
+    }
+
+    /* Responsive: menú vertical en pantallas pequeñas */
+    @media (max-width: 768px) {
+      nav ul {
+        flex-direction: column;
+      }
+
+      nav ul li ul {
+        position: static;
+        box-shadow: none;
+        border-radius: 0;
+      }
+
+      nav ul li ul li ul {
+        position: static;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Biblioteca Virtual de Cuentos</h1>
+    <p>Explora cuentos, obras literarias y libros digitales</p>
+  </header>
+
+  <nav>
+    <ul>
+      <li><a href="inicio.html">Inicio</a></li>
+
+      <li>
+        <a href="#" tabindex="0">Categorías ▼</a>
+        <ul>
+          <li>
+            <a href="#" tabindex="0">Cuentos ▶</a>
+            <ul>
+              <li><a href="cuentopopular.html">Cuento Popular</a></li>
+              <li><a href="cuentoliterario.html">Cuento Literario</a></li>
+              <li><a href="cuento-fantastico.html">Cuento Fantástico</a></li>
+              <li><a href="cuento-terror.html">Cuento de Terror</a></li>
+            </ul>
+          </li>
+
+          <li>
+            <a href="#" tabindex="0">Obras Literarias ▶</a>
+            <ul>
+              <li><a href="novelas.html">Novelas</a></li>
+              <li><a href="poesia.html">Poesía</a></li>
+              <li><a href="teatro.html">Teatro</a></li>
+            </ul>
+          </li>
+
+          <li>
+            <a href="#" tabindex="0">Libros Digitales ▶</a>
+            <ul>
+              <li><a href="libros-educativos.html">Educativos</a></li>
+              <li><a href="libros-narrativos.html">Narrativos</a></li>
+              <li><a href="libros-tecnicos.html">Técnicos</a></li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+
+      <li><a href="sobre-nosotros.html">Sobre Nosotros</a></li>
+      <li><a href="contacto.html">Contacto</a></li>
+    </ul>
+  </nav>
+
+  <main>
+    <h2>Bienvenido a la Biblioteca Virtual</h2>
+    <p>En esta plataforma puedes explorar una gran variedad de cuentos, obras literarias y libros digitales. Navega a través de las categorías para descubrir textos interesantes para todas las edades.</p>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Biblioteca Virtual. Todos los derechos reservados.</p>
+  </footer>
+
+</body>
+</html>
